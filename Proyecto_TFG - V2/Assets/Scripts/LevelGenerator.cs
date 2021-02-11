@@ -39,10 +39,66 @@ public class LevelGenerator : MonoBehaviour
     public GameObject downRoom;
     public GameObject rightRoom;
 
+    public GameObject bossShape;
+    public GameObject smallShape;
+    public GameObject bigShape;
+    public GameObject midShape;
+    public GameObject midShape2;
+
+    private GameObject map;
+
     private void Start()
     {
-        Instantiate(startRoom, transform.position, Quaternion.identity);
+        map = GameObject.Find("Map");
+        //Instantiate(startRoom, transform.position, Quaternion.identity);
+        Invoke("SpawnShapes", 9f);
+        Invoke("ConstructMap", 10f);
     }
 
+    private void SpawnShapes() 
+    {
+        GameObject shape;
 
+        for (int i = 1; i < rooms.Count; i++) 
+        {
+            if (i != rooms.Count - 1)
+            {
+                int rand = Random.Range(0, 100);
+
+                if (rand < 5)
+                {
+                    shape = Instantiate(bigShape, rooms[i].transform.position, Quaternion.identity);
+                    shape.transform.SetParent(map.transform);
+                }
+                else if (rand < 15) 
+                {
+                    shape = Instantiate(midShape, rooms[i].transform.position, Quaternion.identity);
+                    shape.transform.SetParent(map.transform);
+                }
+                else if (rand < 25)
+                {
+                    shape = Instantiate(midShape2, rooms[i].transform.position, Quaternion.identity);
+                    shape.transform.SetParent(map.transform);
+                }
+                else if (rand < 30)
+                {
+                    shape = Instantiate(smallShape, rooms[i].transform.position, Quaternion.identity);
+                    shape.transform.SetParent(map.transform);
+                }
+            }
+            else 
+            {
+                shape = Instantiate(bossShape, rooms[i].transform.position, Quaternion.identity);
+                shape.transform.SetParent(map.transform);
+            }
+        }
+    }
+
+    private void ConstructMap() 
+    {
+        foreach (GameObject room in rooms)
+        {
+            room.transform.SetParent(map.transform);
+        }
+    }
 }

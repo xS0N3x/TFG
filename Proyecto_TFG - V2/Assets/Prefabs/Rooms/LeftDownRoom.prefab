@@ -33750,7 +33750,7 @@ PrefabInstance:
     - target: {fileID: 2989824028775938976, guid: b02b8eee9b409d744acb9cde00d1e32e,
         type: 3}
       propertyPath: hasDoorUp
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2989824028775938976, guid: b02b8eee9b409d744acb9cde00d1e32e,
         type: 3}

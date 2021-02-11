@@ -2259,13 +2259,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2989824028775938976, guid: b02b8eee9b409d744acb9cde00d1e32e,
         type: 3}
+      propertyPath: hasDoorLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989824028775938976, guid: b02b8eee9b409d744acb9cde00d1e32e,
+        type: 3}
       propertyPath: hasRoomLeft
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2989824028775938976, guid: b02b8eee9b409d744acb9cde00d1e32e,
         type: 3}
       propertyPath: hasDoorRight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3296408390831037011, guid: b02b8eee9b409d744acb9cde00d1e32e,
         type: 3}
