@@ -131,3 +131,14 @@ MonoBehaviour:
     type: 3}
   rightRoom: {fileID: 2497693083452771148, guid: eba986912d27f314abd4578d7983c137,
     type: 3}
+  bossShape: {fileID: 2764610500836769387, guid: c39f3ff0f6c38ec4f8c39b7103314d4c,
+    type: 3}
+  smallShape: {fileID: 8126823300101585104, guid: 24e14ba2796131147b02056de04092d5,
+    type: 3}
+  bigShape: {fileID: 3381021325274786454, guid: e82973f4e7342d5439da187d279f0e01,
+    type: 3}
+  midShape: {fileID: 3785454734696490589, guid: 84976f1b53b2f784b854ff4430986966,
+    type: 3}
+  midShape2: {fileID: 8003552611131028901, guid: 1788ce58deb3dd9409883b370a50e736,
+    type: 3}
+  player: {fileID: 0}

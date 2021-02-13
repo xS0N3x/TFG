@@ -47,6 +47,13 @@ public class LevelGenerator : MonoBehaviour
 
     private GameObject map;
 
+    public GameObject player;
+    public GameObject virtualCamera;
+
+    private bool spawnedPlayer = false;
+
+    private bool finished;
+
     private void Start()
     {
         map = GameObject.Find("Map");
@@ -99,6 +106,31 @@ public class LevelGenerator : MonoBehaviour
         foreach (GameObject room in rooms)
         {
             room.transform.SetParent(map.transform);
+            room.transform.Find("Destroyer").gameObject.SetActive(false);
+        }
+
+        finished = true;
+    }
+
+    private void SpawnPlayer() 
+    {
+        if (!spawnedPlayer) 
+        {
+            spawnedPlayer = true;
+            player = Instantiate(player, rooms[0].transform.position, Quaternion.identity);
+            player.name = "Player";
+            virtualCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>().Follow = player.transform;
+        }
+        //player.SetActive(true);
+        
+    }
+
+    private void Update()
+    {
+        if (finished) 
+        {   
+            SpawnPlayer();
+            Destroy(gameObject);
         }
     }
 }
