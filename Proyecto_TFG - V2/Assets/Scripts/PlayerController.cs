@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public int moveSpeed;
-    public int jumpForce;
+    public float jumpForce;
     public GameObject shootSpawn;
     public bool shooting;
     public GameObject groundPoint;
@@ -15,43 +15,158 @@ public class PlayerController : MonoBehaviour
     public bool grounded;
     public GameObject laserPrefab;
     public Vector3 movement;
-
-    private Animator playerAnimator;
+    public bool canShoot;
+    public static PlayerController instance;
+    public float shootingRatio;
+    public bool canAttack;
+    public bool attack;
+    public float damage;
+    public Animator playerAnimator;
     private Rigidbody playerRigidbody;
     private float horizontalInput;
     private float verticalInput;
-    private bool jump;
-    //private float time = 0f;
-    
+    private bool jumping;
+    private bool sliding;
+    private bool attacking;
+    private float time = 0f;
+    public bool blocking;
+    private bool special;
+    public bool diing;
+    public bool dead;
+    public AudioClip laserSound;
+    public AudioClip hurtSound;
+    public AudioSource playerAudio;
+
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody>();
         playerAnimator = GetComponent<Animator>();
+        playerAudio = GetComponent<AudioSource>();
         shooting = false;
+        canAttack = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        CheckGround();
-        /*Timer();*/
-        MovePlayer();
-        RotatePlayer();
-        Jump();
-        Shoot();
+        if (!diing && !dead)
+        {
+            CheckGround();
+            MovePlayer();
+            RotatePlayer();
+            Jump();
+            Slide();
+            Shoot();
+            Attack();
+            Timer();
+            Block();
+            Special();
+        }
+        else if (diing && !dead)
+        {
+            playerAnimator.SetTrigger("dead");
+            dead = true;
+        }
+        
     }
 
     private void FixedUpdate()
     {
         playerAnimator.SetFloat("velocity", movement.magnitude);
         playerAnimator.SetBool("shooting", shooting);
-        if (jump) 
+        playerAnimator.SetBool("blocking", blocking);
+
+        if (shooting)
+        {
+            SpawnLaser();
+        }
+
+        if (jumping)
         {
             playerAnimator.SetTrigger("jump");
-            playerRigidbody.AddForce(new Vector3(jumpForce, 0, 0), ForceMode.Impulse);
-            jump = false;
+            jumping = false;
+        }
+
+        if (sliding)
+        {
+            playerAnimator.SetTrigger("slide");
+            sliding = false;
+        }
+
+        if (special)
+        {
+            playerAnimator.SetTrigger("special");
+            special = false;
+        }
+
+    }
+
+    private void Special() 
+    {
+        if (Input.GetButtonDown("Special"))
+        {
+            special = true;
+        }
+    }
+
+    private void DamageChecker() 
+    {
+        /*if (Input.GetKeyDown(KeyCode.A)) 
+        {
+            playerAnimator.SetTrigger("hurt");
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            playerAnimator.SetTrigger("dead");
+        }*/
+    }
+
+    private void Block() 
+    {
+        if (Input.GetAxis("Block") > 0.1)
+        {
+            blocking = true;
+        }
+        else
+        {
+            blocking = false;
+        }
+    }
+
+    private void Attack() 
+    {
+        if (Input.GetButtonDown("Attack") && !shooting && !sliding) 
+        {
+            //print("has pulsado la X");
+            if (canAttack)
+            {
+                //print("attack = true");
+                attack = true;
+                canAttack = false;
+            }
+            else 
+            {
+                return;
+            }
+        }
+    }
+
+    public void AttackInputManager()
+    {
+        if (!canAttack)
+        {
+            canAttack = true;
+        }
+        else
+        {
+            canAttack = false;
         }
     }
 
@@ -62,7 +177,8 @@ public class PlayerController : MonoBehaviour
 
         movement = new Vector3(horizontalInput, 0, verticalInput).normalized * moveSpeed;
 
-        playerRigidbody.velocity = new Vector3(horizontalInput, 0, verticalInput).normalized * moveSpeed;
+        playerRigidbody.velocity = new Vector3 (movement.x, playerRigidbody.velocity.y, movement.z);
+        
     }
 
     private void RotatePlayer()
@@ -75,7 +191,7 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot() 
     {
-        if (Input.GetAxis("Shoot") > 0.1)
+        if (Input.GetAxis("Shoot") > 0.1 && canShoot)
         {
             shooting = true;
         }
@@ -87,20 +203,34 @@ public class PlayerController : MonoBehaviour
 
     public void SpawnLaser() 
     {
-        if (shooting) 
+        if (shooting && time == 0)
         {
+            playerAudio.PlayOneShot(laserSound);
             Instantiate(laserPrefab, shootSpawn.transform.position, transform.rotation);
+            time = shootingRatio;
         }
     }
 
     private void Jump() 
     {
-        Vector3 jumpVector = new Vector3(0, jumpForce, 0);
-
-        if (Input.GetButtonDown("Jump") && grounded && !shooting) 
+        if (Input.GetButtonDown("Jump") && grounded && !shooting && !sliding && !jumping) 
         {
-            jump = true;
+            playerRigidbody.AddForce(movement*jumpForce,ForceMode.VelocityChange);
+            jumping = true;     
         }
+    }
+
+    private void Slide() 
+    {
+        if (Input.GetButtonDown("Slide") && grounded && !shooting && !jumping && !sliding) 
+        {
+            sliding = true;
+        }
+    }
+
+    private void ResetSlide() 
+    {
+        sliding = false;
     }
 
     private void CheckGround() 
@@ -110,15 +240,21 @@ public class PlayerController : MonoBehaviour
         if (Physics.OverlapSphere(point, checkRadius, groundLayer).Length > 0)
         {
             grounded = true;
+            playerAnimator.applyRootMotion = true;
         }
         else 
         {
             grounded = false;
+            playerAnimator.applyRootMotion = false;
         }
     }
 
-    /*private void Timer() 
+    private void Timer() 
     {
-        time -= -1 * Time.deltaTime;
-    }*/
+        time -= 1 * Time.deltaTime;
+        if (time < 0) 
+        {
+            time = 0f;
+        }
+    }
 }

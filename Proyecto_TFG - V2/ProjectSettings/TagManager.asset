@@ -6,6 +6,9 @@ TagManager:
   tags:
   - SpawnPoint
   - Room
+  - Enemy
+  - Hurt
+  - Shoot
   layers:
   - Default
   - TransparentFX
@@ -17,12 +20,12 @@ TagManager:
   - 
   - SpawnPoints
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Hurt
+  - Shoot
+  - Melee
+  - DetectionArea
+  - Player
+  - Enemy
   - 
   - 
   - 

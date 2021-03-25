@@ -56,32 +56,52 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\SpawnPoint.cs" />
-    <Compile Include="Assets\ImportedAssets\Scifi\Scripts\DoorFunctions.cs" />
-    <Compile Include="Assets\Scripts\AddRoom.cs" />
-    <Compile Include="Assets\Scripts\Destroyer.cs" />
-    <Compile Include="Assets\Scripts\LevelGenerator.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\VolumetricMultiLineBehavior.cs" />
+    <Compile Include="Assets\Scripts\RunBehaviour.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\ShotBehavior.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\Scripts\VolumetricLineVertexData.cs" />
+    <Compile Include="Assets\Scripts\SpawnPoint.cs" />
+    <Compile Include="Assets\Scripts\Transition2Behaviour.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\ImportedAssets\Scifi\Scripts\DoorFunctions.cs" />
+    <Compile Include="Assets\Scripts\Transition1Behaviour.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CreateSinShapedLineStrip.cs" />
+    <Compile Include="Assets\Scripts\AddRoom.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
+    <Compile Include="Assets\Scripts\Destroyer.cs" />
+    <Compile Include="Assets\Scripts\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\IdleBehaviour.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\Scripts\VolumetricLineStripBehavior.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\Scripts\VolumetricLineBehavior.cs" />
+    <Compile Include="Assets\Scripts\ChasePlayer.cs" />
+    <Compile Include="Assets\Scripts\EnemyHealthBar.cs" />
+    <Compile Include="Assets\Scripts\LevelGenerator.cs" />
+    <Compile Include="Assets\Scripts\EnemyMeleeAttack.cs" />
+    <Compile Include="Assets\Scripts\HealthController.cs" />
+    <Compile Include="Assets\Scripts\MeleeAttack.cs" />
+    <Compile Include="Assets\Scripts\Interact.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealthBar.cs" />
+    <Compile Include="Assets\PlayerStats.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\ImportedAssets\Powerbot\Readme.txt" />
      <None Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\Shaders\_LineStripShader.cginc" />
      <None Include="Assets\ImportedAssets\Powerbot\Shaders\Powerbot_Shader.shader" />
+     <None Include="Assets\ImportedAssets\Simple Toon\Shaders\STOutline.shader" />
+     <None Include="Assets\ImportedAssets\ShootingSound\ReadMe.txt" />
      <None Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-TextureAlphaBlended.shader" />
      <None Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-TextureAdditive.shader" />
+     <None Include="Assets\ImportedAssets\Simple Toon\Shaders\STTransparent.shader" />
      <None Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\Shaders\_SingleLineShader.cginc" />
      <None Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-TextureAdditive.shader" />
+     <None Include="Assets\ImportedAssets\Simple Toon\Shaders\STCore.cginc" />
      <None Include="Assets\ImportedAssets\Powerbot\Anims.txt" />
      <None Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-TextureAlphaBlended.shader" />
+     <None Include="Assets\ImportedAssets\Simple Toon\Shaders\STDefault.shader" />
      <None Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-LightSaber.shader" />
      <None Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-LightSaber.shader" />
+     <None Include="Assets\ImportedAssets\Simple Toon\Shaders\STFunctions.cginc" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.17f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
