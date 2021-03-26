@@ -8,6 +8,7 @@ public class ShotBehavior : MonoBehaviour {
 	public float damage;
 	public float shootSpeed;
 	public PlayerController playerController;
+	public GameObject particlesPrefab;
 	
 
 	// Use this for initialization
@@ -26,10 +27,23 @@ public class ShotBehavior : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-		if (other.tag == "Enemy") 
+		if (other.tag == "Enemy")
 		{
 			other.gameObject.transform.parent.GetComponent<HealthController>().TakeDamage(damage);
+			Instantiate(particlesPrefab, transform.position, transform.rotation);
 			Destroy(gameObject);
 		}
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+		if (collision.transform.tag == "Obstacle")
+		{
+			Instantiate(particlesPrefab, transform.position, transform.rotation);
+			Destroy(gameObject);
+		}
+	}
+
+
 }

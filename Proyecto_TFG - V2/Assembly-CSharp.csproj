@@ -57,32 +57,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\VolumetricMultiLineBehavior.cs" />
-    <Compile Include="Assets\Scripts\RunBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Player\RunBehaviour.cs" />
+    <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\ShotBehavior.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\Scripts\VolumetricLineVertexData.cs" />
-    <Compile Include="Assets\Scripts\SpawnPoint.cs" />
-    <Compile Include="Assets\Scripts\Transition2Behaviour.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\LevelGenerator\SpawnPoint.cs" />
+    <Compile Include="Assets\Scripts\Player\Transition2Behaviour.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\ImportedAssets\Scifi\Scripts\DoorFunctions.cs" />
-    <Compile Include="Assets\Scripts\Transition1Behaviour.cs" />
+    <Compile Include="Assets\Scripts\Player\Transition1Behaviour.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CreateSinShapedLineStrip.cs" />
-    <Compile Include="Assets\Scripts\AddRoom.cs" />
+    <Compile Include="Assets\Scripts\LevelGenerator\AddRoom.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
-    <Compile Include="Assets\Scripts\Destroyer.cs" />
-    <Compile Include="Assets\Scripts\EnemyController.cs" />
-    <Compile Include="Assets\Scripts\IdleBehaviour.cs" />
+    <Compile Include="Assets\Scripts\LevelGenerator\Destroyer.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\Player\IdleBehaviour.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\Scripts\VolumetricLineStripBehavior.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\Scripts\VolumetricLineBehavior.cs" />
-    <Compile Include="Assets\Scripts\ChasePlayer.cs" />
-    <Compile Include="Assets\Scripts\EnemyHealthBar.cs" />
-    <Compile Include="Assets\Scripts\LevelGenerator.cs" />
-    <Compile Include="Assets\Scripts\EnemyMeleeAttack.cs" />
-    <Compile Include="Assets\Scripts\HealthController.cs" />
-    <Compile Include="Assets\Scripts\MeleeAttack.cs" />
-    <Compile Include="Assets\Scripts\Interact.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealthBar.cs" />
-    <Compile Include="Assets\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\Enemies\ChasePlayer.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyHealthBar.cs" />
+    <Compile Include="Assets\Scripts\LevelGenerator\LevelGenerator.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyMeleeAttack.cs" />
+    <Compile Include="Assets\Scripts\Enemies\HealthController.cs" />
+    <Compile Include="Assets\Scripts\Player\MeleeAttack.cs" />
+    <Compile Include="Assets\Scripts\Player\Interact.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealthBar.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\ImportedAssets\Powerbot\Readme.txt" />
