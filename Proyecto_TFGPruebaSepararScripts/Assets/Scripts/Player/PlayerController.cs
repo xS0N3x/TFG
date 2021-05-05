@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [HideInInspector] public PlayerStats playerData;
-    [HideInInspector] public GameObject shootSpawn;
+    [HideInInspector]public GameObject shootSpawn;
     public bool shooting;
     [HideInInspector] public GameObject groundPoint;
     public float checkRadius;
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public bool canAttack;
     public bool attack;
     [HideInInspector] public Animator playerAnimator;
-    private Rigidbody playerRigidbody;
+    public Rigidbody playerRigidbody;
     private float horizontalInput;
     private float verticalInput;
     public bool jumping;
@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
         playerShooting = GetComponent<PlayerShooting>();
         shooting = false;
         canAttack = true;
+        blocking = false;
         hurtArea = transform.Find("HurtArea").gameObject;
     }
 
@@ -201,6 +202,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Slide") && grounded && !shooting && !jumping && !sliding) 
         {
+            playerRigidbody.useGravity = false;
             sliding = true;
         }
     }
@@ -208,6 +210,7 @@ public class PlayerController : MonoBehaviour
     private void ResetSlide() 
     {
         sliding = false;
+        playerRigidbody.useGravity = true;
     }
 
     private void CheckGround() 

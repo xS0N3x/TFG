@@ -56,18 +56,21 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Enemies\EnemyMovement.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\VolumetricMultiLineBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\RunBehaviour.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\ShotBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\Scripts\VolumetricLineVertexData.cs" />
+    <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\EnemyShotBehaviour.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\Player\Transition2Behaviour.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\ImportedAssets\Scifi\Scripts\DoorFunctions.cs" />
     <Compile Include="Assets\Scripts\Player\Transition1Behaviour.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CreateSinShapedLineStrip.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyShooting.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator\AddRoom.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator\Destroyer.cs" />
@@ -86,8 +89,10 @@
     <Compile Include="Assets\Scripts\Player\MeleeAttack.cs" />
     <Compile Include="Assets\Scripts\Player\Interact.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealthBar.cs" />
-    <Compile Include="Assets\Scripts\Enemies\EnemyMovement.cs" />
-    <Compile Include="Assets\Scripts\Enemies\EnemyShooting.cs" />
+    <Compile Include="Assets\Scripts\Enemies\DodgeDetection.cs" />
+    <Compile Include="Assets\ImportedAssets\ForceShield\Script\LaserBullet.cs" />
+    <Compile Include="Assets\ImportedAssets\ForceShield\Script\ShieldCollision.cs" />
+    <Compile Include="Assets\ImportedAssets\ForceShield\Script\UserControl.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\ImportedAssets\Powerbot\Readme.txt" />
@@ -101,6 +106,7 @@
      <None Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\Shaders\_SingleLineShader.cginc" />
      <None Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-TextureAdditive.shader" />
      <None Include="Assets\ImportedAssets\Simple Toon\Shaders\STCore.cginc" />
+     <None Include="Assets\ImportedAssets\ForceShield\Shader\ForceShield.shader" />
      <None Include="Assets\ImportedAssets\Powerbot\Anims.txt" />
      <None Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-TextureAlphaBlended.shader" />
      <None Include="Assets\ImportedAssets\Simple Toon\Shaders\STDefault.shader" />

@@ -5,11 +5,13 @@ using UnityEngine;
 public class HealthController : MonoBehaviour
 {
     private EnemyController enemyController;
+    public bool dodging;
 
     // Start is called before the first frame update
     void Start()
     {
         enemyController = GetComponent<EnemyController>();
+        dodging = false;
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class HealthController : MonoBehaviour
             enemyController.dead = true;
         }
         StartCoroutine("GetHurt");
+
     }
 
     IEnumerator GetHurt() 

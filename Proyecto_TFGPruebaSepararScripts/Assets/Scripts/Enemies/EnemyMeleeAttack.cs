@@ -5,11 +5,16 @@ using UnityEngine;
 public class EnemyMeleeAttack : MonoBehaviour
 {
     public EnemyController enemyController;
+    public GameObject shield;
 
     // Start is called before the first frame update
     void Start()
     {
         enemyController = GetComponentInParent<EnemyController>();
+        if (transform.parent.transform.Find("Shield")) 
+        {
+            shield = transform.parent.transform.Find("Shield").gameObject;
+        }
     }
 
     // Update is called once per frame
@@ -22,9 +27,21 @@ public class EnemyMeleeAttack : MonoBehaviour
     {
         if (other.tag == "Player") 
         {
+            PlayerController playerController = other.GetComponentInParent<PlayerController>();
             PlayerHealth playerHealth = other.GetComponentInParent<PlayerHealth>();
 
-            playerHealth.TakeDamage(enemyController.enemyData.attackDamage);
+            if (!playerController.blocking)
+            {
+                playerHealth.TakeDamage(enemyController.enemyData.attackDamage);
+            }
+            else 
+            {
+                playerController.playerAudio.PlayOneShot(playerController.blockSound);
+                if (shield != null) 
+                {
+                    shield.SetActive(false);
+                } 
+            } 
 
         }
     }

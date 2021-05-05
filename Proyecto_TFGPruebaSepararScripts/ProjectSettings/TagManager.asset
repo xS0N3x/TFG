@@ -10,6 +10,9 @@ TagManager:
   - Hurt
   - Shoot
   - Obstacle
+  - Laser
+  - Walls
+  - Shield
   layers:
   - Default
   - TransparentFX
@@ -28,7 +31,7 @@ TagManager:
   - Player
   - Enemy
   - Enviroment
-  - 
+  - Shield
   - 
   - 
   - 

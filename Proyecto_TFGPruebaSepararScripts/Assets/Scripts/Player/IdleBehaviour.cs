@@ -16,6 +16,7 @@ public class IdleBehaviour : StateMachineBehaviour
         if (PlayerController.instance.attack) 
         {
             animator.SetTrigger("attack1");
+            PlayerController.instance.playerRigidbody.useGravity = false;
             MeleeAttack.instance.attack1 = true;
             MeleeAttack.instance.attack2 = false;
             MeleeAttack.instance.attack3 = false;

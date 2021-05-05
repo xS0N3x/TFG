@@ -9,6 +9,7 @@ public class EnemyStats
     public float shotDamage;
     public float maxHealth;
     public float currentHealth;
+    public float shootingRatio;
 
     public EnemyStats(int type) 
     {
@@ -19,13 +20,15 @@ public class EnemyStats
             shotDamage = 0;
             maxHealth = 50;
             
+            
         }
         else if (type == 1) //RangedEnemy (Se aleja de ti, solo puedes matarle disparando)
         {
-            moveSpeed = 5;
+            moveSpeed = 3;
             attackDamage = 0;
             shotDamage = 10;
             maxHealth = 50;
+            shootingRatio = 1f;
         }
         else if (type == 2) //QuickEnemy (Te esquiva los disparos)
         {

@@ -29,16 +29,21 @@ public class ShotBehavior : MonoBehaviour {
     {
 		if (other.tag == "Enemy")
 		{
-			other.gameObject.transform.parent.GetComponent<HealthController>().TakeDamage(damage);
-			Instantiate(particlesPrefab, transform.position, transform.rotation);
-			Destroy(gameObject);
+			HealthController hc = other.gameObject.transform.parent.GetComponent<HealthController>();
+			if (!hc.dodging)
+			{
+				hc.TakeDamage(damage);
+				Instantiate(particlesPrefab, transform.position, transform.rotation);
+				Destroy(gameObject);
+			}
+			
 		}
 	}
 
     private void OnCollisionEnter(Collision collision)
     {
 
-		if (collision.transform.tag == "Obstacle")
+		if (collision.transform.tag == "Obstacle" || collision.transform.tag == "Shield")
 		{
 			Instantiate(particlesPrefab, transform.position, transform.rotation);
 			Destroy(gameObject);

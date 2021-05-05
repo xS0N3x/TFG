@@ -15,14 +15,15 @@ public class DetectionArea : MonoBehaviour
     {
         if (other.tag == "Player" && other.GetComponent<CapsuleCollider>().enabled)
         {
-            //movementScript.agent.SetDestination(other.transform.position);
             movementScript.target = other.gameObject;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        //movementScript.agent.SetDestination(transform.position);
         movementScript.target = null;
+        movementScript.StartCoroutine("RangedCanShoot");
     }
+
+    
 }

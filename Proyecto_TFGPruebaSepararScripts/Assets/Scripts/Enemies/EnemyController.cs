@@ -19,6 +19,8 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public EnemyMovement enemyMovement;
     [HideInInspector] public AudioSource enemyAudio;
     public AudioClip hurtSound;
+    [HideInInspector]public GameObject shootSpawn;
+    [HideInInspector] public EnemyShooting enemyShooting;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,7 @@ public class EnemyController : MonoBehaviour
         enemyAnimator = GetComponent<Animator>();
         enemyCollider = GetComponent<Collider>();
         enemyAudio = GetComponent<AudioSource>();
+        enemyShooting = GetComponent<EnemyShooting>();
         jumped = false;
         hurtArea = transform.Find("HurtArea").gameObject;
         agent.speed = enemyData.moveSpeed;
@@ -50,7 +53,6 @@ public class EnemyController : MonoBehaviour
         }
         else 
         {
-            print(enemyType);
             switch (enemyType) {
                 case 0:
                     enemyMovement.BasicEnemyMovement();

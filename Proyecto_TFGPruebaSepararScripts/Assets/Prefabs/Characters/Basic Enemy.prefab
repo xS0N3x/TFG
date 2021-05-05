@@ -836,6 +836,8 @@ MonoBehaviour:
   enemyMovement: {fileID: 0}
   enemyAudio: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: a830f7b25e40c3d46a680f84cced7911, type: 3}
+  shootSpawn: {fileID: 0}
+  enemyShooting: {fileID: 0}
 --- !u!114 &944919135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,6 +850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3371d8be1dd927340a0fe1dff55da357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dodging: 0
 --- !u!114 &483508318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -861,8 +864,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyController: {fileID: 0}
+  healthController: {fileID: 0}
   target: {fileID: 0}
   turnSpeed: 5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  lineRenderer: {fileID: 0}
+  player: {fileID: 0}
+  laserDetected: 0
+  laser: {fileID: 0}
 --- !u!1 &4729863022458361858
 GameObject:
   m_ObjectHideFlags: 0

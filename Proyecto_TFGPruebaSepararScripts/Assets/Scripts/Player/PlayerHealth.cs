@@ -20,11 +20,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        if (playerController.blocking && playerController.playerData.currentHealth > 0)
-        {
-            playerController.playerAudio.PlayOneShot(playerController.blockSound);   
-        }
-        else if (!playerController.blocking && playerController.playerData.currentHealth > 0)
+        if (!playerController.blocking && playerController.playerData.currentHealth > 0)
         {
             playerController.playerData.currentHealth -= amount;
             playerController.playerAudio.volume = 0.1f;

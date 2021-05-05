@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 316368309}
   - component: {fileID: 316368308}
   m_Layer: 0
-  m_Name: Slider
+  m_Name: SliderHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,8 +103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e12b786f8f0209f4a9517bcb69feafa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 0
   slider: {fileID: 316368309}
   healthController: {fileID: 0}
   playerController: {fileID: 0}
@@ -653,7 +651,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6536301631081824671}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!114 &6536301631081824643
 MonoBehaviour:
   m_ObjectHideFlags: 0
