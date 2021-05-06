@@ -40,7 +40,7 @@ public class EnemyStats
         }
         else if (type == 3) //StrongEnemy (Tienes que bloquearle o stunearle para poder pegarle)
         {
-            moveSpeed = 3;
+            moveSpeed = 2;
             attackDamage = 20;
             shotDamage = 0;
             maxHealth = 50;

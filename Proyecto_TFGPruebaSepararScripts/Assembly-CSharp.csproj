@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\Enemies\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\Player\IdleBehaviour.cs" />
+    <Compile Include="Assets\ImportedAssets\ForceShield\Script\LaserBullet.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\Scripts\VolumetricLineStripBehavior.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\Scripts\VolumetricLineBehavior.cs" />
@@ -86,13 +87,13 @@
     <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMeleeAttack.cs" />
     <Compile Include="Assets\Scripts\Enemies\HealthController.cs" />
+    <Compile Include="Assets\Scripts\Enemies\DodgeDetection.cs" />
     <Compile Include="Assets\Scripts\Player\MeleeAttack.cs" />
     <Compile Include="Assets\Scripts\Player\Interact.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealthBar.cs" />
-    <Compile Include="Assets\Scripts\Enemies\DodgeDetection.cs" />
-    <Compile Include="Assets\ImportedAssets\ForceShield\Script\LaserBullet.cs" />
     <Compile Include="Assets\ImportedAssets\ForceShield\Script\ShieldCollision.cs" />
     <Compile Include="Assets\ImportedAssets\ForceShield\Script\UserControl.cs" />
+    <Compile Include="Assets\Scripts\Enemies\DeadDetectionArea.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\ImportedAssets\Powerbot\Readme.txt" />

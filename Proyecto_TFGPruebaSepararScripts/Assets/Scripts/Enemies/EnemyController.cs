@@ -21,6 +21,7 @@ public class EnemyController : MonoBehaviour
     public AudioClip hurtSound;
     [HideInInspector]public GameObject shootSpawn;
     [HideInInspector] public EnemyShooting enemyShooting;
+    public bool resurrected;
 
     // Start is called before the first frame update
     void Start()
@@ -48,11 +49,19 @@ public class EnemyController : MonoBehaviour
             agent.isStopped = true;
             enemyRigidbody.freezeRotation = true;
             enemyRigidbody.velocity = Vector3.zero;
-            enemyCollider.enabled = false;
+            //enemyCollider.enabled = false;
             hurtArea.SetActive(false);
+            
         }
         else 
         {
+            if (resurrected) 
+            {
+                agent.isStopped = false;
+                enemyRigidbody.freezeRotation = false;
+                hurtArea.SetActive(true);
+                resurrected = false;
+            }
             switch (enemyType) {
                 case 0:
                     enemyMovement.BasicEnemyMovement();

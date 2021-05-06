@@ -17,7 +17,6 @@ public class HealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void TakeDamage(float amount)
@@ -27,6 +26,7 @@ public class HealthController : MonoBehaviour
         {
             enemyController.enemyAnimator.SetTrigger("dead");
             enemyController.dead = true;
+            //dodging = true;
         }
         StartCoroutine("GetHurt");
 

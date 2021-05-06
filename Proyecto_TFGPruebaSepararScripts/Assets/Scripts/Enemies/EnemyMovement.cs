@@ -9,12 +9,13 @@ public class EnemyMovement : MonoBehaviour
     public GameObject target;
     public float turnSpeed;
     public LayerMask playerLayer;
-    public LineRenderer lineRenderer;
+    //public LineRenderer lineRenderer;
     public GameObject player;
     private bool canShoot;
     public bool laserDetected;
     public GameObject laser;
     private bool dodgeReset;
+    public bool shield;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +23,9 @@ public class EnemyMovement : MonoBehaviour
         healthController = GetComponent<HealthController>();
         enemyController = GetComponent<EnemyController>();
         turnSpeed = 5;
-        lineRenderer = GetComponent<LineRenderer>();
+        //lineRenderer = GetComponent<LineRenderer>();
         dodgeReset = false;
+        shield = true;
     }
 
     // Update is called once per frame
@@ -73,7 +75,7 @@ public class EnemyMovement : MonoBehaviour
     public void RangedEnemyMovement() {
         if (target != null)
         {
-            enemyController.enemyAnimator.SetBool("shooting", true);
+            enemyController.enemyAnimator.SetBool("shooting", false);
 
             float distanceToPlayer = Vector3.Distance(transform.position, target.transform.position);
 
@@ -163,28 +165,76 @@ public class EnemyMovement : MonoBehaviour
     public void StrongEnemyMovement() {
         if (target != null)
         {
+            if (shield)
+            {
+                enemyController.agent.SetDestination(target.transform.position);
+
+                if ((transform.position - target.transform.position).magnitude < 2) //Attacking
+                {
+                    //On Range
+                    enemyController.agent.isStopped = true;
+                    enemyController.enemyAnimator.SetFloat("velocity", 0);
+
+                    //Look at the Player
+                    Vector3 targetDir = target.transform.position - transform.position;
+                    Quaternion lookRotation = Quaternion.LookRotation(targetDir);
+                    transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
+
+
+                    if (enemyController.canAttack)
+                    {
+                        enemyController.enemyAnimator.SetTrigger("basicAttack");
+                        enemyController.canAttack = false;
+                    }
+
+                }
+                else //Chasing Player
+                {
+                    enemyController.enemyAnimator.SetFloat("velocity", 1);
+                    Jumping();
+                }
+            }
+            else 
+            {
+                float distanceToPlayer = Vector3.Distance(transform.position, target.transform.position);
+
+                Vector3 direction = transform.position - target.transform.position;
+                Vector3 destination = transform.position + direction;
+
+                enemyController.agent.SetDestination(destination);
+                enemyController.enemyAnimator.SetFloat("velocity", 1);
+            }
+        }
+        else //Out of Range
+        {
+            enemyController.enemyAnimator.SetFloat("velocity", 0);
+            enemyController.agent.SetDestination(transform.position);
+        }
+    }
+
+    public void MedicEnemyMovement()
+    {
+        if (target != null)
+        {
             enemyController.agent.SetDestination(target.transform.position);
 
-            if ((transform.position - target.transform.position).magnitude < 2) //Attacking
+            if ((transform.position - target.transform.position).magnitude < 2) //Heal
             {
                 //On Range
                 enemyController.agent.isStopped = true;
                 enemyController.enemyAnimator.SetFloat("velocity", 0);
 
-                //Look at the Player
+                //Look at the dead body
                 Vector3 targetDir = target.transform.position - transform.position;
                 Quaternion lookRotation = Quaternion.LookRotation(targetDir);
                 transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
 
+                enemyController.enemyAnimator.SetTrigger("special");
 
-                if (enemyController.canAttack)
-                {
-                    enemyController.enemyAnimator.SetTrigger("basicAttack");
-                    enemyController.canAttack = false;
-                }
-
+                //Heal the deadBody
+                StartCoroutine(Heal());
             }
-            else //Chasing Player
+            else //Moving towards the dead body
             {
                 enemyController.enemyAnimator.SetFloat("velocity", 1);
                 Jumping();
@@ -196,11 +246,6 @@ public class EnemyMovement : MonoBehaviour
             enemyController.agent.SetDestination(transform.position);
         }
     }
-
-    public void MedicEnemyMovement() {
-    
-    }
-
     private void Jumping()
     {
         if (enemyController.agent.isOnOffMeshLink && !enemyController.jumped)
@@ -234,5 +279,16 @@ public class EnemyMovement : MonoBehaviour
     public void DodgeBool(bool active) 
     {
         healthController.dodging = active;
+    }
+
+    private IEnumerator Heal() 
+    {
+        yield return new WaitForSecondsRealtime(4.5f);
+        EnemyController targetController = target.GetComponent<EnemyController>();
+        targetController.enemyData.currentHealth = targetController.enemyData.maxHealth;
+        targetController.enemyAnimator.SetTrigger("Resurrected");
+        targetController.dead = false;
+        targetController.resurrected = true;
+        target = null;
     }
 }

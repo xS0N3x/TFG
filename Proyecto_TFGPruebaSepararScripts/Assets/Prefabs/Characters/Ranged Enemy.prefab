@@ -252,7 +252,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -763,13 +763,13 @@ GameObject:
   - component: {fileID: 3331310434520087467}
   - component: {fileID: 8100251589033610756}
   - component: {fileID: 51203946}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Ranged Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5302746659531039784
 Transform:
   m_ObjectHideFlags: 0
@@ -1014,10 +1014,10 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
-  lineRenderer: {fileID: 0}
   player: {fileID: 0}
   laserDetected: 0
   laser: {fileID: 0}
+  shield: 0
 --- !u!114 &8100251589033610756
 MonoBehaviour:
   m_ObjectHideFlags: 0
