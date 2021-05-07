@@ -1774,6 +1774,7 @@ MonoBehaviour:
   hurtSound: {fileID: 8300000, guid: a830f7b25e40c3d46a680f84cced7911, type: 3}
   shootSpawn: {fileID: 0}
   enemyShooting: {fileID: 0}
+  resurrected: 0
 --- !u!114 &7878402023220164469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1810,6 +1811,8 @@ MonoBehaviour:
   laserDetected: 0
   laser: {fileID: 0}
   shield: 0
+  canHeal: 0
+  bossShield: 0
 --- !u!1 &7599351725206395633
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,7 +2189,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

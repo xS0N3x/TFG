@@ -543,7 +543,11 @@ MonoBehaviour:
   canAttack: 0
   attack: 0
   playerAnimator: {fileID: 0}
+  playerRigidbody: {fileID: 0}
+  jumping: 0
+  sliding: 0
   blocking: 0
+  special: 0
   diing: 0
   dead: 0
   laserSound: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}

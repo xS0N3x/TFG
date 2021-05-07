@@ -32,6 +32,19 @@ public class HealthController : MonoBehaviour
 
     }
 
+    public void BossTakeDamage(float amount)
+    {
+        enemyController.enemyData.currentHealth -= amount;
+        if (enemyController.enemyData.currentHealth <= 0)
+        {
+            enemyController.enemyAnimator.SetTrigger("dead");
+            enemyController.dead = true;
+            //dodging = true;
+        }
+        //StartCoroutine("GetHurt");
+
+    }
+
     IEnumerator GetHurt() 
     {
         enemyController.enemyAudio.PlayOneShot(enemyController.hurtSound);

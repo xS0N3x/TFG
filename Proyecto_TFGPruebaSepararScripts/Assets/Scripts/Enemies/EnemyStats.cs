@@ -10,6 +10,7 @@ public class EnemyStats
     public float maxHealth;
     public float currentHealth;
     public float shootingRatio;
+    public float attackDistance;
 
     public EnemyStats(int type) 
     {
@@ -19,7 +20,7 @@ public class EnemyStats
             attackDamage = 10;
             shotDamage = 0;
             maxHealth = 50;
-            
+            attackDistance = 2;
             
         }
         else if (type == 1) //RangedEnemy (Se aleja de ti, solo puedes matarle disparando)
@@ -36,14 +37,16 @@ public class EnemyStats
             attackDamage = 6;
             shotDamage = 0;
             maxHealth = 50;
+            attackDistance = 2;
 
         }
         else if (type == 3) //StrongEnemy (Tienes que bloquearle o stunearle para poder pegarle)
         {
             moveSpeed = 2;
-            attackDamage = 20;
+            attackDamage = 15;
             shotDamage = 0;
-            maxHealth = 50;
+            maxHealth = 100;
+            attackDistance = 2;
 
         }
         else if (type == 4) //MedicEnemy (Cura a los demas enemigos)
@@ -56,9 +59,11 @@ public class EnemyStats
         else if (type == 5) //Boss 
         {
             moveSpeed = 3;
-            attackDamage = 30;
-            shotDamage = 5;
-            maxHealth = 10000;
+            attackDamage = 20;
+            shotDamage = 10;
+            maxHealth = 500;
+            shootingRatio = 1f;
+            attackDistance = 3;
         }
 
         currentHealth = maxHealth;

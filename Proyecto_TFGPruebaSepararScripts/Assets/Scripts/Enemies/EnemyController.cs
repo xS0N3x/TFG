@@ -19,7 +19,7 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public EnemyMovement enemyMovement;
     [HideInInspector] public AudioSource enemyAudio;
     public AudioClip hurtSound;
-    [HideInInspector]public GameObject shootSpawn;
+    public GameObject shootSpawn;
     [HideInInspector] public EnemyShooting enemyShooting;
     public bool resurrected;
 
@@ -77,6 +77,9 @@ public class EnemyController : MonoBehaviour
                     break;
                 case 4:
                     enemyMovement.MedicEnemyMovement();
+                    break;
+                case 5:
+                    enemyMovement.BossEnemyMovement();
                     break;
             }
                 

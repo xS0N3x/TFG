@@ -1993,6 +1993,7 @@ MonoBehaviour:
   hurtSound: {fileID: 8300000, guid: a830f7b25e40c3d46a680f84cced7911, type: 3}
   shootSpawn: {fileID: 0}
   enemyShooting: {fileID: 0}
+  resurrected: 0
 --- !u!114 &4346626627810447074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2029,6 +2030,8 @@ MonoBehaviour:
   laserDetected: 0
   laser: {fileID: 0}
   shield: 0
+  canHeal: 0
+  bossShield: 0
 --- !u!1 &5627546148757698168
 GameObject:
   m_ObjectHideFlags: 0

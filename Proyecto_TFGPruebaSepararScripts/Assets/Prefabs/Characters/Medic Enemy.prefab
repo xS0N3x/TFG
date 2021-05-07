@@ -68,7 +68,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1018,7 +1018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6452935995886395752
 Transform:
   m_ObjectHideFlags: 0
@@ -1052,7 +1052,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 6db689300faaf7949b8511eee95af4b8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1220,6 +1220,8 @@ MonoBehaviour:
   laserDetected: 0
   laser: {fileID: 0}
   shield: 0
+  canHeal: 0
+  bossShield: 0
 --- !u!114 &1797072030
 MonoBehaviour:
   m_ObjectHideFlags: 0

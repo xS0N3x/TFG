@@ -37,13 +37,13 @@ public class EnemyMeleeAttack : MonoBehaviour
             else 
             {
                 playerController.playerAudio.PlayOneShot(playerController.blockSound);
-                if (shield != null) 
+                if (shield != null)
                 {
                     shield.SetActive(false);
                     enemyController.hurtArea.SetActive(true);
                     enemyController.enemyMovement.shield = false;
                     StartCoroutine(resetShield());
-                } 
+                }
             } 
 
         }
@@ -52,8 +52,11 @@ public class EnemyMeleeAttack : MonoBehaviour
     IEnumerator resetShield() 
     {
         yield return new WaitForSecondsRealtime(6f);
-        shield.SetActive(true);
-        enemyController.hurtArea.SetActive(false);
-        enemyController.enemyMovement.shield = true;
+        if (enemyController.enemyMovement.bossShield) 
+        {
+            shield.SetActive(true);
+            enemyController.hurtArea.SetActive(false);
+            enemyController.enemyMovement.shield = true;
+        }         
     }
 }

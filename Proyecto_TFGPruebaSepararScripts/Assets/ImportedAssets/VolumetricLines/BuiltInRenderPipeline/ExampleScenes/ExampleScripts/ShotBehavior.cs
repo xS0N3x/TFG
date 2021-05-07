@@ -38,6 +38,18 @@ public class ShotBehavior : MonoBehaviour {
 			}
 			
 		}
+
+		if (other.tag == "Boss")
+		{
+			HealthController hc = other.gameObject.transform.parent.GetComponent<HealthController>();
+			if (!hc.dodging)
+			{
+				hc.BossTakeDamage(damage);
+				Instantiate(particlesPrefab, transform.position, transform.rotation);
+				Destroy(gameObject);
+			}
+
+		}
 	}
 
     private void OnCollisionEnter(Collision collision)

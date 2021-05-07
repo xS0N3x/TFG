@@ -16,6 +16,8 @@ public class EnemyMovement : MonoBehaviour
     public GameObject laser;
     private bool dodgeReset;
     public bool shield;
+    public bool canHeal;
+    public bool bossShield;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,8 @@ public class EnemyMovement : MonoBehaviour
         //lineRenderer = GetComponent<LineRenderer>();
         dodgeReset = false;
         shield = true;
+        canHeal = true;
+        bossShield = false;
     }
 
     // Update is called once per frame
@@ -40,7 +44,7 @@ public class EnemyMovement : MonoBehaviour
         {
             enemyController.agent.SetDestination(target.transform.position);
 
-            if ((transform.position - target.transform.position).magnitude < 2) //Attacking
+            if ((transform.position - target.transform.position).magnitude < enemyController.enemyData.attackDistance) //Attacking
             {
                 //On Range
                 enemyController.agent.isStopped = true;
@@ -134,7 +138,7 @@ public class EnemyMovement : MonoBehaviour
             }
 
 
-            if ((transform.position - target.transform.position).magnitude < 2) //Attacking
+            if ((transform.position - target.transform.position).magnitude < enemyController.enemyData.attackDistance) //Attacking
             {
                 //On Range
                 enemyController.agent.isStopped = true;
@@ -169,7 +173,7 @@ public class EnemyMovement : MonoBehaviour
             {
                 enemyController.agent.SetDestination(target.transform.position);
 
-                if ((transform.position - target.transform.position).magnitude < 2) //Attacking
+                if ((transform.position - target.transform.position).magnitude < enemyController.enemyData.attackDistance) //Attacking
                 {
                     //On Range
                     enemyController.agent.isStopped = true;
@@ -232,7 +236,10 @@ public class EnemyMovement : MonoBehaviour
                 enemyController.enemyAnimator.SetTrigger("special");
 
                 //Heal the deadBody
-                StartCoroutine(Heal());
+                if (canHeal) {
+                    canHeal = false;
+                    StartCoroutine(Heal());
+                }
             }
             else //Moving towards the dead body
             {
@@ -246,6 +253,43 @@ public class EnemyMovement : MonoBehaviour
             enemyController.agent.SetDestination(transform.position);
         }
     }
+
+    public void BossEnemyMovement()
+    {
+        if (enemyController.enemyData.currentHealth > enemyController.enemyData.maxHealth * 80 / 100) //Basic Enemy
+        {
+            enemyController.agent.speed = 3;
+            BasicEnemyMovement();
+        }
+        else if (enemyController.enemyData.currentHealth > enemyController.enemyData.maxHealth * 60 / 100) //Ranged Enemy
+        {
+            enemyController.agent.speed = 5;
+            transform.Find("DetectionArea").GetComponent<SphereCollider>().radius = 8;
+            RangedEnemyMovement();
+        }
+        else if (enemyController.enemyData.currentHealth > enemyController.enemyData.maxHealth * 40 / 100) //Quick Enemy
+        {
+            enemyController.agent.speed = 3;
+            transform.Find("LaserDetectionArea").gameObject.SetActive(true);
+            transform.Find("DetectionArea").GetComponent<SphereCollider>().radius = 20;
+            enemyController.enemyAnimator.SetBool("shooting", false);
+            QuickEnemyMovement();
+        }
+        else if (enemyController.enemyData.currentHealth > enemyController.enemyData.maxHealth * 20 / 100) //Strong Enemy
+        {
+            enemyController.agent.speed = 2;
+            transform.Find("LaserDetectionArea").gameObject.SetActive(false);
+            healthController.dodging = false;
+            if (!bossShield) 
+            {
+                transform.Find("Shield").gameObject.SetActive(true);
+                bossShield = true;
+                shield = true;
+            }
+            StrongEnemyMovement();
+        }
+    }
+
     private void Jumping()
     {
         if (enemyController.agent.isOnOffMeshLink && !enemyController.jumped)
@@ -285,10 +329,12 @@ public class EnemyMovement : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(4.5f);
         EnemyController targetController = target.GetComponent<EnemyController>();
+        target = null;
         targetController.enemyData.currentHealth = targetController.enemyData.maxHealth;
         targetController.enemyAnimator.SetTrigger("Resurrected");
         targetController.dead = false;
         targetController.resurrected = true;
-        target = null;
+        enemyController.agent.isStopped = false;
+        canHeal = true;
     }
 }
