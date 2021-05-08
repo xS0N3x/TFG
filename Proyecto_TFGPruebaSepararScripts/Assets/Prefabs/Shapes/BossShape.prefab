@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2071934240382523252}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Offset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,9 +51,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 940675510790287029}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: BossShape
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,9 +80,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2071934240382523252}
     m_Modifications:
+    - target: {fileID: 1038211997981222, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293088052674990, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348659319449026, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_Name
       value: Turret 3 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988215034115836, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4597833192631702, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_RootOrder
@@ -143,9 +163,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2071934240382523252}
     m_Modifications:
+    - target: {fileID: 1038211997981222, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293088052674990, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348659319449026, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_Name
       value: Turret 3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988215034115836, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4597833192631702, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_RootOrder
@@ -206,9 +246,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2071934240382523252}
     m_Modifications:
+    - target: {fileID: 1038211997981222, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293088052674990, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348659319449026, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_Name
       value: Turret 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988215034115836, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4597833192631702, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_RootOrder
@@ -269,9 +329,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2071934240382523252}
     m_Modifications:
+    - target: {fileID: 1038211997981222, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293088052674990, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348659319449026, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_Name
       value: Turret 3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988215034115836, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4597833192631702, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_RootOrder
@@ -332,9 +412,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2071934240382523252}
     m_Modifications:
+    - target: {fileID: 1038211997981222, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293088052674990, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348659319449026, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_Name
       value: Turret 3 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988215034115836, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4597833192631702, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_RootOrder
@@ -395,9 +495,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2071934240382523252}
     m_Modifications:
+    - target: {fileID: 1038211997981222, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293088052674990, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348659319449026, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_Name
       value: Turret 3 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988215034115836, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4597833192631702, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_RootOrder
@@ -458,9 +578,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2071934240382523252}
     m_Modifications:
+    - target: {fileID: 1038211997981222, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293088052674990, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348659319449026, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_Name
       value: Turret 3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988215034115836, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4597833192631702, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_RootOrder
@@ -521,9 +661,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2071934240382523252}
     m_Modifications:
+    - target: {fileID: 1038211997981222, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293088052674990, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348659319449026, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_Name
       value: Turret 3 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988215034115836, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4597833192631702, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_RootOrder
@@ -584,9 +744,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2071934240382523252}
     m_Modifications:
+    - target: {fileID: 1038211997981222, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293088052674990, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348659319449026, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_Name
       value: Turret 3 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988215034115836, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4597833192631702, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_RootOrder
@@ -647,9 +827,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2071934240382523252}
     m_Modifications:
+    - target: {fileID: 1038211997981222, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293088052674990, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348659319449026, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_Name
       value: Turret 3 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988215034115836, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4597833192631702, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_RootOrder
@@ -710,9 +910,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2071934240382523252}
     m_Modifications:
+    - target: {fileID: 1038211997981222, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293088052674990, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348659319449026, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_Name
       value: Turret 3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988215034115836, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4597833192631702, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_RootOrder
@@ -773,9 +993,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2071934240382523252}
     m_Modifications:
+    - target: {fileID: 1038211997981222, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293088052674990, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348659319449026, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_Name
       value: Turret 3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1726424736729782, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988215034115836, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4597833192631702, guid: f43df730d5be7f14ea3bcd9d0be58a99, type: 3}
       propertyPath: m_RootOrder

@@ -11,6 +11,14 @@ public class PlayerHealthBar : MonoBehaviour
     public Slider slider;
     public PlayerHealth healthController;
     public PlayerController playerController;
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+        healthController = player.GetComponent<PlayerHealth>();
+        playerController = player.GetComponent<PlayerController>();
+    }
 
     // Update is called once per frame
     void Update()

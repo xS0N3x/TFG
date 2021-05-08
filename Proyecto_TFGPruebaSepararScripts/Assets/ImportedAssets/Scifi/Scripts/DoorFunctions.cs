@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class DoorFunctions : MonoBehaviour {
 
-    static Animator Door_Anim;
-    
+    //static Animator Door_Anim;
+    public Animator Door_Anim;
+
     public GameObject Locker;
     public GameObject Sound;
 
 
-    private void Awake()
+    private void Start()
     {
-    Door_Anim = GetComponent<Animator>();
-
+        Door_Anim = GetComponent<Animator>();
     }
   
 
    void OnTriggerEnter(Collider col)   
     {
 
+        
         if(col.gameObject.tag == "Player")
         {
-
             Door_Anim.SetBool("Door_Open",true);
             Locker.SetActive(true);
             StartCoroutine(Timmer());

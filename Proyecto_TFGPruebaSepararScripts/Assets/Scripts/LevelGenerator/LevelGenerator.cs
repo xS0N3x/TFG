@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class LevelGenerator : MonoBehaviour
     public GameObject startRoom;
 
     public List<GameObject> rooms;
+
+    [HideInInspector] public EnemySpawner enemySpawner;
+    [HideInInspector] public NavMeshBuilder navMeshBuilder;
 
     public GameObject[] upRooms;
     public GameObject[] leftRooms;
@@ -50,12 +54,16 @@ public class LevelGenerator : MonoBehaviour
     public GameObject player;
     public GameObject virtualCamera;
 
+    public GameObject canvas;
+
     private bool spawnedPlayer = false;
 
     private bool finished;
 
     private void Start()
     {
+        enemySpawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
+        navMeshBuilder = GameObject.Find("NavMeshBuilder").GetComponent<NavMeshBuilder>();
         map = GameObject.Find("Map");
         //Instantiate(startRoom, transform.position, Quaternion.identity);
         Invoke("SpawnShapes", 9f);
@@ -70,6 +78,7 @@ public class LevelGenerator : MonoBehaviour
         {
             if (i != rooms.Count - 1)
             {
+
                 int rand = Random.Range(0, 100);
 
                 if (rand < 5)
@@ -92,6 +101,7 @@ public class LevelGenerator : MonoBehaviour
                     shape = Instantiate(smallShape, rooms[i].transform.position, Quaternion.identity);
                     shape.transform.SetParent(map.transform);
                 }
+
             }
             else 
             {
@@ -128,8 +138,35 @@ public class LevelGenerator : MonoBehaviour
     private void Update()
     {
         if (finished) 
-        {   
+        {
+            enemySpawner.rooms = rooms;
+            
+            for (int i = 0; i < enemySpawner.rooms.Count; i++) 
+            {
+                int dice = Random.Range(0, 100);
+
+                if (i == 0) 
+                {
+                    enemySpawner.waveRooms.Add(false);
+                }
+                else if (i == enemySpawner.rooms.Count - 1)
+                {
+                    enemySpawner.waveRooms.Add(true);
+                }
+                else if (dice < 50)
+                {
+                    enemySpawner.waveRooms.Add(true);
+                }
+                else
+                {
+                    enemySpawner.waveRooms.Add(false);
+                }
+            }
+
+            enemySpawner.canSpawn = true;
+            navMeshBuilder.canBuild = true;
             SpawnPlayer();
+            canvas.transform.GetChild(0).gameObject.SetActive(true);
             Destroy(gameObject);
         }
     }
