@@ -7,6 +7,11 @@ using UnityEngine.EventSystems;
 public class Menu : MonoBehaviour
 {
     public GameObject firstButtonSelected;
+    public Pause pauseScript;
+
+    public GameObject healthBar;
+    public GameObject pauseMenu;
+    public bool gamePaused;
 
     // Start is called before the first frame update
     void Start()
@@ -28,5 +33,18 @@ public class Menu : MonoBehaviour
     public void ExitButton() 
     {
         Application.Quit();
+    }
+
+    public void ResumeButton() 
+    {
+        healthBar.SetActive(true);
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        gamePaused = false;
+    }
+
+    public void MenuButton() 
+    {
+        SceneManager.LoadScene(0);
     }
 }

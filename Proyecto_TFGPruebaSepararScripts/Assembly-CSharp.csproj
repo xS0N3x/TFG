@@ -56,13 +56,16 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMovement.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\VolumetricMultiLineBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\RunBehaviour.cs" />
+    <Compile Include="Assets\Scripts\LoadingBar.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\ShotBehavior.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\Scripts\VolumetricLineVertexData.cs" />
+    <Compile Include="Assets\Scripts\NavMeshBuilder.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\EnemyShotBehaviour.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\Player\Transition2Behaviour.cs" />
@@ -74,6 +77,7 @@
     <Compile Include="Assets\Scripts\LevelGenerator\AddRoom.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator\Destroyer.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\Player\IdleBehaviour.cs" />
@@ -95,9 +99,6 @@
     <Compile Include="Assets\ImportedAssets\ForceShield\Script\ShieldCollision.cs" />
     <Compile Include="Assets\Scripts\Enemies\DeadDetectionArea.cs" />
     <Compile Include="Assets\ImportedAssets\ForceShield\Script\UserControl.cs" />
-    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
-    <Compile Include="Assets\NavMeshBuilder.cs" />
-    <Compile Include="Assets\LoadingBar.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\ImportedAssets\Powerbot\Readme.txt" />
