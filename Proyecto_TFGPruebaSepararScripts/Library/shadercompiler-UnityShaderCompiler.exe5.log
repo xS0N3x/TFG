@@ -1,2 +1,18 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=4 insize=7632 outsize=2448 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=6259 outsize=1500 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=9934 outsize=2429 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5791 outsize=1406 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at Fireworks2.vfx(163): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  error: 1 plat 4 at Fireworks2.vfx(181): 'i': loop control variable conflicts with a previous declaration in the outer scope; most recent declaration will be used
+  api=4 insize=8716 outsize=2738 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7559 outsize=5216 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=7742 outsize=1867 ok=1

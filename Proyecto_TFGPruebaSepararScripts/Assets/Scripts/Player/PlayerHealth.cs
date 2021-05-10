@@ -33,4 +33,10 @@ public class PlayerHealth : MonoBehaviour
         }
 
     }
+
+    public void TakeHealth(float amount)
+    {
+        playerController.playerData.currentHealth += amount;
+        playerController.playerAudio.PlayOneShot(playerController.healSound);
+    }
 }

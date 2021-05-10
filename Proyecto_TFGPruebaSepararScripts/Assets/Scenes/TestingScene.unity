@@ -1175,16 +1175,21 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2115805549, guid: e1d0ce17439d84c4682b03195b32b7bd, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2115805549, guid: e1d0ce17439d84c4682b03195b32b7bd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4729863022458361856, guid: e1d0ce17439d84c4682b03195b32b7bd,
         type: 3}
       propertyPath: m_Name
       value: Basic Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729863022458361856, guid: e1d0ce17439d84c4682b03195b32b7bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4729863022458520608, guid: e1d0ce17439d84c4682b03195b32b7bd,
         type: 3}
@@ -1254,6 +1259,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1054747008}
+    - target: {fileID: 5861053743707470725, guid: d3e462b46e58e6c44a4ddf6b487753c8,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861053743707470725, guid: d3e462b46e58e6c44a4ddf6b487753c8,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5861053744137477187, guid: d3e462b46e58e6c44a4ddf6b487753c8,
         type: 3}
       propertyPath: agent
@@ -1319,6 +1334,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 5861053744715547942, guid: d3e462b46e58e6c44a4ddf6b487753c8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3e462b46e58e6c44a4ddf6b487753c8, type: 3}
 --- !u!1001 &6128816455490184471
@@ -1336,17 +1356,22 @@ PrefabInstance:
     - target: {fileID: 607259142510367993, guid: c6178dca2ab342b4580e6228c09f7c36,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 607259142510367993, guid: c6178dca2ab342b4580e6228c09f7c36,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5627546148757698166, guid: c6178dca2ab342b4580e6228c09f7c36,
         type: 3}
       propertyPath: m_Name
       value: Quick Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627546148757698166, guid: c6178dca2ab342b4580e6228c09f7c36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5627546148757989974, guid: c6178dca2ab342b4580e6228c09f7c36,
         type: 3}
@@ -1419,12 +1444,12 @@ PrefabInstance:
     - target: {fileID: 6452935994740476876, guid: 5f20bdd274cef0f4eb92c69ff2f31c42,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6452935994740476876, guid: 5f20bdd274cef0f4eb92c69ff2f31c42,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6452935995886395752, guid: 5f20bdd274cef0f4eb92c69ff2f31c42,
         type: 3}
@@ -1486,6 +1511,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medic Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6452935995886435656, guid: 5f20bdd274cef0f4eb92c69ff2f31c42,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f20bdd274cef0f4eb92c69ff2f31c42, type: 3}
 --- !u!1001 &6536301631099047954
@@ -1495,6 +1525,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 118594083, guid: b3b9590299323c248b5f9e2bc718169e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118594083, guid: b3b9590299323c248b5f9e2bc718169e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 316368307, guid: b3b9590299323c248b5f9e2bc718169e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 100.00003
@@ -1624,6 +1662,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 748196059, guid: 5b5c4652f85cc9e419a74d5264e73d91, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 748196059, guid: 5b5c4652f85cc9e419a74d5264e73d91, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3331310434520087467, guid: 5b5c4652f85cc9e419a74d5264e73d91,
         type: 3}
       propertyPath: player
@@ -1633,6 +1679,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ranged Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302746659530946568, guid: 5b5c4652f85cc9e419a74d5264e73d91,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5302746659531039784, guid: 5b5c4652f85cc9e419a74d5264e73d91,
         type: 3}
@@ -1706,12 +1757,12 @@ PrefabInstance:
     - target: {fileID: 5484278529048025280, guid: d803cdc22862bbc48a363b9ab62bcd18,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5484278529048025280, guid: d803cdc22862bbc48a363b9ab62bcd18,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7599351725206161103, guid: d803cdc22862bbc48a363b9ab62bcd18,
         type: 3}
@@ -1772,6 +1823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Strong Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599351725206395631, guid: d803cdc22862bbc48a363b9ab62bcd18,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d803cdc22862bbc48a363b9ab62bcd18, type: 3}

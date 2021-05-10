@@ -553,6 +553,7 @@ MonoBehaviour:
   laserSound: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
   hurtSound: {fileID: 8300000, guid: a830f7b25e40c3d46a680f84cced7911, type: 3}
   blockSound: {fileID: 8300000, guid: a744516491241814fadb5319c52498ce, type: 3}
+  healSound: {fileID: 8300000, guid: 90ee632e63411eb4a81bd3f382fe4f08, type: 3}
   playerAudio: {fileID: 0}
   hurtArea: {fileID: 0}
 --- !u!114 &625537355

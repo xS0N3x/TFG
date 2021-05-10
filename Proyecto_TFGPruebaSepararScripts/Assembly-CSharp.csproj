@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Enemies\EnemyStats.cs" />
     <Compile Include="Assets\Scripts\Player\IdleBehaviour.cs" />
     <Compile Include="Assets\ImportedAssets\ForceShield\Script\LaserBullet.cs" />
+    <Compile Include="Assets\Cool Visual Effects - Part 1\Scripts\ConstantRotation.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\Scripts\VolumetricLineStripBehavior.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\Scripts\VolumetricLineBehavior.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Assets\Scripts\LevelGenerator\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyMeleeAttack.cs" />
+    <Compile Include="Assets\Cool Visual Effects - Part 1\Scripts\EffectManager.cs" />
     <Compile Include="Assets\ImportedAssets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\BossShotBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemies\HealthController.cs" />
     <Compile Include="Assets\Scripts\Enemies\DodgeDetection.cs" />
@@ -99,6 +101,7 @@
     <Compile Include="Assets\ImportedAssets\ForceShield\Script\ShieldCollision.cs" />
     <Compile Include="Assets\Scripts\Enemies\DeadDetectionArea.cs" />
     <Compile Include="Assets\ImportedAssets\ForceShield\Script\UserControl.cs" />
+    <Compile Include="Assets\Scripts\Collect.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\ImportedAssets\Powerbot\Readme.txt" />
@@ -656,20 +659,44 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.17f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Cinemachine">
       <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -677,11 +704,23 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="com.unity.cinemachine.editor">
       <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>

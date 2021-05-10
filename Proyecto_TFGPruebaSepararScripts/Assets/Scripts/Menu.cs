@@ -37,10 +37,11 @@ public class Menu : MonoBehaviour
 
     public void ResumeButton() 
     {
-        healthBar.SetActive(true);
+        /*healthBar.SetActive(true);
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        gamePaused = false;
+        gamePaused = false;*/
+        pauseScript.ResumeGame();
     }
 
     public void MenuButton() 

@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public AudioClip laserSound;
     [HideInInspector] public AudioClip hurtSound;
     [HideInInspector] public AudioClip blockSound;
+    [HideInInspector] public AudioClip healSound;
     [HideInInspector] public AudioSource playerAudio;
     [HideInInspector] public GameObject hurtArea;
 
