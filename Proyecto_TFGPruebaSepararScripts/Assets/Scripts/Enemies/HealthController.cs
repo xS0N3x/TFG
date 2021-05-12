@@ -26,6 +26,8 @@ public class HealthController : MonoBehaviour
         {
             enemyController.enemyAnimator.SetTrigger("dead");
             enemyController.dead = true;
+            enemyController.enemyCollider.enabled = false;
+            enemyController.SpawnHealth();
             //dodging = true;
         }
         StartCoroutine("GetHurt");

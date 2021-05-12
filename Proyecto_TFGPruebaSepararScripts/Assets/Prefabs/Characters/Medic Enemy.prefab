@@ -1262,6 +1262,8 @@ MonoBehaviour:
   shootSpawn: {fileID: 0}
   enemyShooting: {fileID: 0}
   resurrected: 0
+  healthBallPrefab: {fileID: 5919394627521552289, guid: d85aac2d8be9be147a896ff69b6fabbb,
+    type: 3}
 --- !u!195 &1797072038
 NavMeshAgent:
   m_ObjectHideFlags: 0

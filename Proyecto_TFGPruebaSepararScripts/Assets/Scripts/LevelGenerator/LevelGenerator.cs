@@ -84,29 +84,34 @@ public class LevelGenerator : MonoBehaviour
                 if (rand < 5)
                 {
                     shape = Instantiate(bigShape, rooms[i].transform.position, Quaternion.identity);
-                    shape.transform.SetParent(map.transform);
+                    //shape.transform.SetParent(map.transform);
+                    shape.transform.SetParent(rooms[i].transform.Find("Shape"));
                 }
                 else if (rand < 15) 
                 {
                     shape = Instantiate(midShape, rooms[i].transform.position, Quaternion.identity);
-                    shape.transform.SetParent(map.transform);
+                    //shape.transform.SetParent(map.transform);
+                    shape.transform.SetParent(rooms[i].transform.Find("Shape"));
                 }
                 else if (rand < 25)
                 {
                     shape = Instantiate(midShape2, rooms[i].transform.position, Quaternion.identity);
-                    shape.transform.SetParent(map.transform);
+                    //shape.transform.SetParent(map.transform);
+                    shape.transform.SetParent(rooms[i].transform.Find("Shape"));
                 }
                 else if (rand < 30)
                 {
                     shape = Instantiate(smallShape, rooms[i].transform.position, Quaternion.identity);
-                    shape.transform.SetParent(map.transform);
+                    //shape.transform.SetParent(map.transform);
+                    shape.transform.SetParent(rooms[i].transform.Find("Shape"));
                 }
 
             }
             else 
             {
                 shape = Instantiate(bossShape, rooms[i].transform.position, Quaternion.identity);
-                shape.transform.SetParent(map.transform);
+                //shape.transform.SetParent(map.transform);
+                shape.transform.SetParent(rooms[i].transform.Find("Shape"));
             }
         }
     }

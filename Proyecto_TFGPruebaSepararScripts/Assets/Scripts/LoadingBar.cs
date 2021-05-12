@@ -27,7 +27,7 @@ public class LoadingBar : MonoBehaviour
     void Update()
     {
         slider.value += Time.deltaTime * 100 / 11;
-        numberText.text = (Mathf.Round(slider.value * 100f) / 100f).ToString() + "%";
+        numberText.text = (Mathf.Round(slider.value * 100f) / 100f).ToString("0") + "%";
 
         if (slider.value < 50)
         {

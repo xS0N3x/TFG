@@ -11,7 +11,7 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public Animator enemyAnimator;
     public bool jumped;
     public bool dead;
-    [HideInInspector] private Collider enemyCollider;
+    [HideInInspector] public Collider enemyCollider;
     [HideInInspector] public GameObject target;
     public bool canAttack;
     [HideInInspector] public GameObject hurtArea;
@@ -22,6 +22,7 @@ public class EnemyController : MonoBehaviour
     public GameObject shootSpawn;
     [HideInInspector] public EnemyShooting enemyShooting;
     public bool resurrected;
+    public GameObject healthBallPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -90,5 +91,20 @@ public class EnemyController : MonoBehaviour
     private void resetNavMesh() {
         agent.isStopped = false;
         canAttack = true;
+    }
+
+    public void SpawnHealth() 
+    {
+        int dice = Random.Range(0,100);
+        if (dice < 50)
+        {
+            GameObject healthBall = Instantiate(healthBallPrefab, transform);
+            healthBall.transform.SetParent(GameObject.Find("Pickups").transform);
+            print("apareceVida");
+        }
+        else 
+        {
+            print("noApareceVida");
+        }
     }
 }

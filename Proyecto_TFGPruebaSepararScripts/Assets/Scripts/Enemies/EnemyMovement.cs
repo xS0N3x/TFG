@@ -331,6 +331,7 @@ public class EnemyMovement : MonoBehaviour
         EnemyController targetController = target.GetComponent<EnemyController>();
         target = null;
         targetController.enemyData.currentHealth = targetController.enemyData.maxHealth;
+        targetController.enemyCollider.enabled = true;
         targetController.enemyAnimator.SetTrigger("Resurrected");
         targetController.dead = false;
         targetController.resurrected = true;

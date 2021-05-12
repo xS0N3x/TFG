@@ -1994,6 +1994,8 @@ MonoBehaviour:
   shootSpawn: {fileID: 0}
   enemyShooting: {fileID: 0}
   resurrected: 0
+  healthBallPrefab: {fileID: 5919394627521552289, guid: d85aac2d8be9be147a896ff69b6fabbb,
+    type: 3}
 --- !u!114 &4346626627810447074
 MonoBehaviour:
   m_ObjectHideFlags: 0
